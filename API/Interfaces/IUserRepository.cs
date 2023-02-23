@@ -1,6 +1,7 @@
 
 using API.DTOs;
 using API.Entities;
+using API.Helpers;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Interfaces
@@ -12,8 +13,8 @@ namespace API.Interfaces
         Task<IEnumerable<AppUser>> GetUsersAsync();
         Task<AppUser> GetUserByIdAsync(int id);
         Task<AppUser> GetUserByUsernameAsync(string username);
-        Task<IEnumerable<MemberDto>> GetMembersAsync();
+        Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams);
         Task<MemberDto> GetMemberAsync(string username);
-        Task GetMemberAsync();
+        
     }
 }
