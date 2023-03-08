@@ -53,9 +53,9 @@ namespace API.Controllers
 
         
         [HttpGet("{username}")]
-        public async Task<ActionResult<MemberDto>> GetUser(string username)
+        public async Task<ActionResult<MemberDto>> GetUser(string username, bool isCurrentUser)
         {
-           return await _uow.UserRepository.GetMemberAsync(username);
+           return await _uow.UserRepository.GetMemberAsync(username, isCurrentUser);
 
         }
 
@@ -72,6 +72,9 @@ namespace API.Controllers
 
             return BadRequest("Failed to update user");
         }
+
+
+        
 
         [HttpPost("add-photo")]
         public async Task<ActionResult<PhotoDto>> AddPhoto(IFormFile file)
@@ -101,6 +104,9 @@ namespace API.Controllers
             return BadRequest("Problem adding photo");
         }
 
+
+
+
         [HttpPut("set-main-photo/{photoId}")]
         public async Task<ActionResult> SetMainPhoto(int photoId)
         {
@@ -122,6 +128,8 @@ namespace API.Controllers
 
             return BadRequest("Problem setting the main photo");
         }
+
+
 
         [HttpDelete("delete-photo/{photoId}")]
         public async Task<ActionResult> DeletePhoto(int photoId)

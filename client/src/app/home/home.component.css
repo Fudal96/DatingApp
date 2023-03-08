@@ -1,0 +1,13 @@
+img {
+  width: 320px;
+}
+.lead {
+  font-size: 22px;
+}
+
+@media only screen and (min-width: 1024px) {
+  img {
+    width: 640px;
+  }
+  
+}

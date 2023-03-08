@@ -12,7 +12,7 @@ export class ListsComponent {
   members: Member[] | undefined;
   predicate = 'liked';
   pageNumber = 1;
-  pageSize = 5;
+  pageSize = 10;
   pagination: Pagination | undefined;
 
 

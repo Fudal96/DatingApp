@@ -1,0 +1,97 @@
+
+select {
+  width: 130px;
+}
+input {
+  width: 70px;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  .btn {
+    padding: 3px 10px;
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .btn {
+   font-size: 13px;
+  }
+  select{
+    width: 90px;
+    font-size: 11px;
+  }
+  input {
+    width: 50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.mobile {
+  overflow-x: hidden;
+}
+
+.matches-found {
+  font-size: 16px;
+  text-align: center;
+}
+
+.filters-container {
+  width: 100vw;
+}
+
+.form-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.filters-set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.filters-set-set {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.filters-apply {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.last-active {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 576px) {
+  .filters-set {
+    justify-content: flex-start;
+  }
+  .filters-apply {
+    justify-content: flex-start;
+  }
+}
+
+
+
+
+
+

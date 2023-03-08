@@ -1,0 +1,11 @@
+.gender-pick {
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+
+@media only screen and (max-width: 347px) {
+  .gender-pick {
+    font-size: 13px;
+  }
+}

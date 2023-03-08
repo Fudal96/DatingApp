@@ -1,9 +1,11 @@
+
+
 <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && register()" autocomplete="off">
 
   <h2 class="text-center text-primary">Sign up</h2>
   <hr>
 
-<div class="mb-3">
+<div class="gender-pick">
   <label style="margin-right:10px">I am a:</label>
   <label class="form-check-label">
     <input type="radio" class="form-check-input" value="male" formControlName="gender"> Male
@@ -41,4 +43,10 @@
     <button class="btn btn-default" type="submit" (click)="cancel()">Cancel</button>
   </div>
 </form>
+
+
+
+
+
+
 
