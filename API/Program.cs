@@ -51,7 +51,8 @@ app.UseCors(builder => builder
 .AllowAnyMethod()
 .AllowCredentials()
 .WithOrigins("https://localhost:4200",
-             "http://localhost:8080"
+             "http://localhost:8080",
+             "https://datemeapp.fly.dev"
 ));
 
 app.UseAuthentication();

@@ -13,6 +13,7 @@ export class MemberMessagesComponent {
   @ViewChild('messageForm') messageForm?: NgForm
   @Input() username?: string;
   messageContent = '';
+  loading = false;
 
 
 
@@ -25,9 +26,10 @@ export class MemberMessagesComponent {
 
   sendMessage() {
     if (!this.username) return;
+    this.loading = true;
     this.messageService.sendMessage(this.username, this.messageContent)?.then(() => {
       this.messageForm?.reset();
-    })
+    }).finally(() => this.loading = false);
   }
 
 }
